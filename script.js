@@ -13,6 +13,22 @@ function showLetter() {
   document.getElementById("introText").style.opacity = 0;
   document.querySelector(".btn").style.display = "none";
 
+  // 🎵 Play music
+  const bgMusic = document.getElementById("bgMusic");
+  bgMusic.volume = 0; // start silent
+  bgMusic.play();
+
+  // 🎵 Fade in effect
+  let volume = 0;
+  const fadeIn = setInterval(() => {
+    if (volume < 1) {
+      volume += 0.05; // increase slowly
+      bgMusic.volume = volume;
+    } else {
+      clearInterval(fadeIn);
+    }
+  }, 200); // every 200ms
+
   setTimeout(() => {
     const letterBox = document.getElementById("letterBox");
     const typedText = document.getElementById("typedText");
@@ -24,7 +40,7 @@ function showLetter() {
         typedText.innerHTML += message.charAt(i);
         i++;
 
-        // 📱 Auto-scroll as text appears
+        // Auto-scroll
         letterBox.scrollTop = letterBox.scrollHeight;
 
         setTimeout(typeWriter, 30); // typing speed
@@ -34,5 +50,7 @@ function showLetter() {
     typeWriter();
   }, 600);
 }
+
+
 
 
