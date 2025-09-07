@@ -1,4 +1,12 @@
-const message = `I don’t even know if you’ll ever read this.\nBut if you do… I just want you to know, I still think about you sometimes.\n\nWe both tried. We both cared. But the universe just never gave us enough space to become “us.”\n\nI just wonder… if we had met at a different point in life, would the ending have been different?\n\nAnyway, I hope you're doing okay, even though we’re not in each other’s lives anymore.`;
+const message = `Hi bubbby, I know its too late and cringe pajud pag approach but I want u to know that I really miss you. 
+Taga gabie ko sig huna huna nimo and I really want it to stop kay dinako gusto ma damgohan ka kay sakit. 
+Stuck sa what could've beens and what if and what should've been sa atong relationship. 
+I don't think I can find someone better or someone who I can love the way I loved you hart. 
+You bring a piece of me nga pangitaon sa uban. 
+I love you hart and I miss u, sa damgo magunitan taka usab and maka uban, sakit siya pero thats the only time I can feel you. 
+I'd rather feel that pain, that delusion, than not feeling anything from you ever again. 
+I dont wanna miss the chance. And I hope I can still see you and talk to you again. 
+I miss you very much.`;  
 
 function showLetter() {
   document.getElementById("introText").style.opacity = 0;
