@@ -1,4 +1,5 @@
-const message = `My dearest bubby, I know its too late and cringe pajud pag approach but I want u to know that I really miss you. 
+const message = `My dearest bubby, 
+I know its too late and cringe pajud pag approach but I want u to know that I really miss you. 
 Taga gabie ko sig huna huna nimo and I really want it to stop kay dinako gusto ma damgohan ka kay sakit. 
 Stuck sa what could've beens and what if and what should've been sa atong relationship. 
 I don't think I can find someone better or someone who I can love the way I loved you hart. 
@@ -33,4 +34,5 @@ function showLetter() {
     typeWriter();
   }, 600);
 }
+
 
