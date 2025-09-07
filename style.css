@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* allow scrolling */
+  min-height: 100vh; /* allow scroll on mobile */
   flex-direction: column;
   overflow-x: hidden;
   padding: 10px;
@@ -41,21 +41,21 @@ body {
 
 .letter {
   display: none;
-  background-color: #fdf6e3; /* base paper color */
+  background-color: #fdf6e3 !important; /* force beige paper */
   background-image: repeating-linear-gradient(
     to bottom,
     #fdf6e3 0px,
     #fdf6e3 27px,
     #d2d2d2 28px
-  );
-  background-repeat: repeat-y;
-  background-size: 100% 28px; /* lines scale properly */
+  ) !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% 28px !important;
   color: #333;
   padding: 30px 30px 30px 70px;
   border-radius: 10px;
   width: 80%;
   max-width: 500px;
-  max-height: 80vh; /* responsive height */
+  max-height: 80vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
   line-height: 1.6;
@@ -64,7 +64,7 @@ body {
   white-space: pre-wrap;
   overflow-wrap: break-word;
   font-family: "Courier New", monospace;
-  overflow-y: auto; /* scroll if text is too long */
+  overflow-y: auto;
 }
 
 .letter p {
