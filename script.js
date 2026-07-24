@@ -13,48 +13,27 @@ But here I am.
 To whom it may only concern,
 daki`;  
 
-function showLetter() {
-  document.getElementById("introText").style.opacity = 0;
-  document.querySelector(".btn").style.display = "none";
+function openLetter() {
+  const letter = document.getElementById("letter");
+  const intro = document.querySelector(".intro");
+  const button = document.querySelector(".btn");
+  const music = document.getElementById("music");
 
-  // 🎵 Play music
-  const bgMusic = document.getElementById("bgMusic");
-  bgMusic.volume = 0; // start silent
-  bgMusic.play();
-
-  // 🎵 Fade in effect
-  let volume = 0;
-  const fadeIn = setInterval(() => {
-    if (volume < 1) {
-      volume += 0.05; // increase slowly
-      bgMusic.volume = volume;
-    } else {
-      clearInterval(fadeIn);
-    }
-  }, 200); // every 200ms
+  intro.style.opacity = "0";
+  button.style.opacity = "0";
 
   setTimeout(() => {
-    const letterBox = document.getElementById("letterBox");
-    const typedText = document.getElementById("typedText");
-    letterBox.style.display = "block";
-    let i = 0;
+    intro.style.display = "none";
+    button.style.display = "none";
 
-    function typeWriter() {
-      if (i < message.length) {
-        typedText.innerHTML += message.charAt(i);
-        i++;
+    letter.style.display = "block";
 
-        // Auto-scroll
-        letterBox.scrollTop = letterBox.scrollHeight;
+    // Music starts after the button click
+    music.volume = 0.35;
+    music.play();
 
-        setTimeout(typeWriter, 30); // typing speed
-      }
-    }
-
-    typeWriter();
-  }, 600);
+  }, 800);
 }
-
 
 
 
