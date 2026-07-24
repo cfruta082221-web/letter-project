@@ -1,5 +1,5 @@
 const message = `My dearest 🦆daki, 
-I can't write you a written letter right now, so I'm making this webpage to say what I truly felt for you.
+I can't write you a written letter right now, so I'm making this webpage to say what I truly felt for you. As cliche as it sounds but it's true.
 I don't really know how to say this properly, but I want to try. when I start becoming comfortable with someone or when I start caring about them,
 I end up doing the exact opposite of what I actually want.
 
