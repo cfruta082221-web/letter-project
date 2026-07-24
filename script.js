@@ -23,48 +23,35 @@ daki`;
 
 function showLetter() {
 
-  const letter = document.getElementById("letterBox");
-  const intro = document.getElementById("introText");
-  const button = document.querySelector(".btn");
   const music = document.getElementById("bgMusic");
 
-  // Start music immediately when the button is clicked
   music.volume = 0.35;
 
   music.play()
     .then(() => {
-      console.log("Music is playing");
+      console.log("MUSIC IS PLAYING");
     })
-    .catch(error => {
-      console.error("Music could not play:", error);
+    .catch((error) => {
+      console.error("MUSIC ERROR:", error);
     });
 
-  // Hide intro and button
-  intro.style.opacity = "0";
-  button.style.opacity = "0";
+  document.getElementById("introText").style.display = "none";
+  document.querySelector(".btn").style.display = "none";
 
-  setTimeout(() => {
+  const letter = document.getElementById("letterBox");
+  letter.style.display = "block";
 
-    intro.style.display = "none";
-    button.style.display = "none";
+  const typedText = document.getElementById("typedText");
 
-    // Show letter
-    letter.style.display = "block";
+  let i = 0;
 
-    // Typing animation
-    const typedText = document.getElementById("typedText");
-
-    let i = 0;
-
-    function typeWriter() {
-      if (i < message.length) {
-        typedText.textContent += message.charAt(i);
-        i++;
-        setTimeout(typeWriter, 35);
-      }
+  function typeWriter() {
+    if (i < message.length) {
+      typedText.textContent += message.charAt(i);
+      i++;
+      setTimeout(typeWriter, 35);
     }
+  }
 
-    typeWriter();
-
-  }, 800);
+  typeWriter();
 }
