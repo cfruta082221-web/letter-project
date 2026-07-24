@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To whom it may only concern</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="intro" id="introText">
-      To whom it may only concern,
-    </div>
-    <button class="btn" onclick="showLetter()">Read it</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="letter" id="letterBox">
-      <p id="typedText"></p>
-      <img src="ttd.png" alt="Signature" class="signature" />
-    </div>
+  <title>To whom it may only concern</title>
 
-    <script src="script.js"></script>
-    <audio id="bgMusic" loop>
-  <source src="./music.mp3" type="audio/mpeg">
-</audio>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  </body>
+<body>
+
+  <div class="intro" id="introText">
+    To whom it may only concern,
+  </div>
+
+  <button class="btn" onclick="showLetter()">
+    Read it
+  </button>
+
+  <div class="letter" id="letterBox">
+    <p id="typedText"></p>
+
+    <img
+      src="ttd.png"
+      alt="Signature"
+      class="signature"
+    />
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
 </html>
-
-
-
-
